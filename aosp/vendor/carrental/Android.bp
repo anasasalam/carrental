@@ -1,0 +1,15 @@
+cc_library_static {
+    name: "vendor.aosp.carrental",
+    srcs: [
+        "service/ConfigManager.java",
+        "service/NotificationService.java",
+        "service/SpeedMonitorService.java",
+        "service/User.java",
+    ],
+    shared_libs: [
+        "android.car",
+    ],
+    // for system APIs:
+    vendor: true,
+    privileged: true, // If required
+}

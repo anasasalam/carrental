@@ -1,0 +1,19 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aosp.vendor.carrental.service"
+    android:sharedUserId="system">
+
+    <uses-permission android:name="android.car.PERMISSION_CAR_PROPERTY_READ" />
+    <uses-permission android:name="android.car.PERMISSION_CAR_PROPERTY_WRITE" />  <uses-permission android:name="android.permission.INTERNET" />  <application>
+        <service
+            android:name=".SpeedMonitorService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.car.PERMISSION_CAR_PROPERTY_READ">
+            <intent-filter>
+                <action android:name="com.aosp.carrental.SpeedMonitorService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
+
